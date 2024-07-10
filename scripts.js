@@ -18,6 +18,11 @@ function checkTime(i) {
 
 function saveNotes(){
     var currentNotes = $("textarea").val()
-    localStorage.setItem("notes", currentNotes)
+    localStorage.setItem("notes", currentNotes);
 }
-$("saveNotesBtn").click(saveNotes)
+$("saveNotesBtn").click(saveNotes);
+
+$(document).ready(function(){
+var savedNotes = localStorage.getItem("notes")
+$("textArea").val(savedNotes)
+};
